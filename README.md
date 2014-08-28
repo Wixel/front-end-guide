@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #Wixel Front-end Style Guide
 ===
 
@@ -168,3 +169,6 @@ Not part of coding but has a big impact on site performance ie. page load.
 Use SVG where possible - optimize images with an image optimizer - BG images can be lossy, large images with fine detail - should be main content -lossless
 
 
+=======
+Coming soon.
+>>>>>>> d9e7cf916dbd5dbb4cb5f41e0a27926702591c6d
