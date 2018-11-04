@@ -1,15 +1,14 @@
-#Wixel Front-end Style Guide
-===
+# Wixel Front-end Style Guide
 
 The Wixel Style Guide defines the format, rules and style that should be followed by developers working on **ALL** Wixel sites & products. The reason for the Style Guide is to have high quality & maintainable code which result in great products/sites.
 
-
 ---
 
-##General
+## General
 
-###Indentation
-Don't mix indentation spaces *always look at the indentation used throughout the document*, at Wixel we use 4 spaces for indentation.
+### Indentation
+
+Don't mix indentation spaces _always look at the indentation used throughout the document_, at Wixel we use 4 spaces for indentation.
 
 ```
 .foo{
@@ -17,39 +16,46 @@ Don't mix indentation spaces *always look at the indentation used throughout the
 }
 ```
 
-###Comments
+### Comments
+
 Always use descriptive comments where possible but avoid comments ending up in production code (keep performance in mind) except if it serves an important purpose.
 
 Useful comments would include the following information:
 
-* Where the code has affect
-* What does it do
-* Why have you chosen this solution
-* Warnings
-* If better solutions are available list them for other developers.
+- Where the code has affect
+- What does it do
+- Why have you chosen this solution
+- Warnings
+- If better solutions are available list them for other developers.
 
-###Automate your build process
+### Automate your build process
+
 Your time spent coding should be uninterrupted and other tasks like compiling, optimising, refreshing should be done automatically. Use an automatic task runner to do these things for you i.e. Codekit, grunt, gulp , etc.
 
-###Code validity
+### Code validity
+
 Continuously check the validity of the code you're writing. Modern browsers auto correct a lot of invalid HTML but that is no excuse to write poor code.
 
-###Separation
+### Separation
+
 Strictly keep structure (markup), presentation (styling), and behaviour (scripting) apart.
 
-###Assets
+### Assets
+
 Always keep http request to a minimum, compile and minify assets with the exception of libraries and large files.
 
 ---
 
-##HTML
+## HTML
 
-###Document type
+### Document type
+
 All Wixel products/sites should use the HTML5 spec and therefore use `<!DOCTYPE html>`.
 
-###Elements
+### Elements
 
-####Block elements
+### #Block elements
+
 Block elements should always have their opening and closing tags on single lines i.e.
 
 ```
@@ -64,18 +70,21 @@ Block elements should always have their opening and closing tags on single lines
 </article>
 ```
 
-####Inline elements
+### #Inline elements
+
 Inline elements should be on single lines i.e.
 
 ```
 <b>The content.</b>
 ```
 
-####Void elements
+### #Void elements
+
 Although fine with HTML, do not close void elements, i.e.,
 Write `<br>` not `<br />`
 
-###Semantics & accessibility
+### Semantics & accessibility
+
 Use elements (sometimes incorrectly called “tags”) for what they have been created for. For example, use heading elements for headings, `p` elements for paragraphs, `a` elements for anchors, etc.
 
 [HTML5 elements list](https://developer.mozilla.org/en/docs/Web/Guide/HTML/HTML5/HTML5_element_list)
@@ -84,10 +93,10 @@ Use elements (sometimes incorrectly called “tags”) for what they have been c
 
 Only use the `a` element if the `href` element actually links to something otherwise use `button`.
 
-
 ```
 <a href="#" >Scroll to top</a>
 ```
+
 rather use
 
 ```
@@ -96,14 +105,16 @@ rather use
 
 Please check [when to use the button element](http://css-tricks.com/use-button-element/) to see why.
 
-####Multimedia fallback
+### #Multimedia fallback
+
 For multimedia, such as images, videos, animated objects via `canvas`, make sure to offer alternative access. For images that means use of meaningful alternative text (`alt`) and for video and audio transcripts and captions, if available.
 
 Providing alternative contents is important for accessibility reasons: A blind user has few cues to tell what an image is about without `alt`, and other users may have no way of understanding what video or audio contents are about either.
 
 (For images whose `alt` attributes would introduce redundancy, and for images whose purpose is purely decorative which you cannot immediately use CSS for, use no alternative text, as in `alt=""`.)
 
-####Keep it clean
+### #Keep it clean
+
 Try not to use any unnecessary elements.
 
 Also omit type attributes for style sheets and scripts. ie.
@@ -114,30 +125,34 @@ rather use
 
 `<script src="path/to/script.js" >Scroll to top</script>`
 
-####Quotation marks
+### #Quotation marks
+
 Use double `""` for HTML and single `''` for CSS and JS.
 
 ---
 
-##CSS
+## CSS
 
 Use a pre-processor where possible (We use the SCSS syntax of Sass) and make code as reusable as possible — think of systems and not pages.
 
-###Simple do's and don't
+### Simple do's and don't
+
 Never use ID's in stylesheets. (follows the rule of keeping markup, styling and scripting apart).
 
 Avoid nesting parent and child elements.
 
 Selectors should be simple i.e. `.class` instead of `div.class`.
 
-###Sass
+### Sass
+
 We use the SCSS syntax of Sass.
 
-Never ever use a framework where there will be any unused  styles or that you find yourself removing code. We're incredibly strict on performance.
+Never ever use a framework where there will be any unused styles or that you find yourself removing code. We're incredibly strict on performance.
 
 For a simple front-end framework grab the [Wixel starter framework](https://github.com/Wixel/simple-wixel-starter-framework) to add to the project.
 
-####Nesting
+### #Nesting
+
 Never nest more than 3 levels deep. Nesting should also make logical sense i.e.
 
 ```
@@ -170,7 +185,7 @@ Nesting in SCSS is both a curse and a blessing. Nesting helps keep your sections
 .section{
 	// global styles for all sections
 	display: inline-block;
-	
+
 	&_about{
 		// styles for this section
 	}
@@ -194,7 +209,8 @@ With the output css being:
 	}
 ```
 
-####Reusable class names
+### #Reusable class names
+
 Reusing common styles reduces your stylesheet size, the risk of overwriting properties and saving time in development.
 
 ```
@@ -213,6 +229,7 @@ Reusing common styles reduces your stylesheet size, the risk of overwriting prop
 	}
 }
 ```
+
 Which you can then simply add to your block elements with `.bg-dark`, `.bg-light` or `.bg-accent` Instead of doing the following over and over:
 
 ```
@@ -234,19 +251,16 @@ Which you can then simply add to your block elements with `.bg-dark`, `.bg-light
 }
 ```
 
-
-####Comments
+### #Comments
 
 Keep you SCSS code well documented with comments but don't compile comments into the CSS file except for licences or important notices that need to be shown in source.
 
 ---
 
-##Images
+## Images
 
 Not part of coding but has a big impact on site performance. So I felt it had to be noted here.
 
 Use inline SVG for all icons and pretty much anything possible. We use [SVGInjector](https://github.com/iconic/SVGInjector) to keep our SVG's in single files but inject them into the DOM, this keeps your html files clean and the ability to style and animate our SVG's.
 
 Optimise all jpeg's and png's (use SVG's where applicable) with an image optimiser.
-
-
