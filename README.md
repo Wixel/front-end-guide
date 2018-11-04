@@ -2,6 +2,8 @@
 
 The Wixel Style Guide defines the format, rules and style that should be followed by developers working on **ALL** Wixel sites & products. The reason for the Style Guide is to have high quality & maintainable code which result in great products/sites.
 
+> We're working on a new framework that will help guide Front-end developers a lot better, with tools, components and anything else to build amazing UIs called Kaizen.
+
 ---
 
 ## General
