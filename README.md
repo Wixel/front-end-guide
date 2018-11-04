@@ -54,7 +54,7 @@ All Wixel products/sites should use the HTML5 spec and therefore use `<!DOCTYPE 
 
 ### Elements
 
-### #Block elements
+#### Block elements
 
 Block elements should always have their opening and closing tags on single lines i.e.
 
@@ -70,7 +70,7 @@ Block elements should always have their opening and closing tags on single lines
 </article>
 ```
 
-### #Inline elements
+#### Inline elements
 
 Inline elements should be on single lines i.e.
 
@@ -78,7 +78,7 @@ Inline elements should be on single lines i.e.
 <b>The content.</b>
 ```
 
-### #Void elements
+#### Void elements
 
 Although fine with HTML, do not close void elements, i.e.,
 Write `<br>` not `<br />`
@@ -105,7 +105,7 @@ rather use
 
 Please check [when to use the button element](http://css-tricks.com/use-button-element/) to see why.
 
-### #Multimedia fallback
+#### Multimedia fallback
 
 For multimedia, such as images, videos, animated objects via `canvas`, make sure to offer alternative access. For images that means use of meaningful alternative text (`alt`) and for video and audio transcripts and captions, if available.
 
@@ -113,7 +113,7 @@ Providing alternative contents is important for accessibility reasons: A blind u
 
 (For images whose `alt` attributes would introduce redundancy, and for images whose purpose is purely decorative which you cannot immediately use CSS for, use no alternative text, as in `alt=""`.)
 
-### #Keep it clean
+#### Keep it clean
 
 Try not to use any unnecessary elements.
 
@@ -125,7 +125,7 @@ rather use
 
 `<script src="path/to/script.js" >Scroll to top</script>`
 
-### #Quotation marks
+#### Quotation marks
 
 Use double `""` for HTML and single `''` for CSS and JS.
 
@@ -151,7 +151,7 @@ Never ever use a framework where there will be any unused styles or that you fin
 
 For a simple front-end framework grab the [Wixel starter framework](https://github.com/Wixel/simple-wixel-starter-framework) to add to the project.
 
-### #Nesting
+#### Nesting
 
 Never nest more than 3 levels deep. Nesting should also make logical sense i.e.
 
@@ -209,7 +209,7 @@ With the output css being:
 	}
 ```
 
-### #Reusable class names
+#### Reusable class names
 
 Reusing common styles reduces your stylesheet size, the risk of overwriting properties and saving time in development.
 
@@ -251,7 +251,7 @@ Which you can then simply add to your block elements with `.bg-dark`, `.bg-light
 }
 ```
 
-### #Comments
+#### Comments
 
 Keep you SCSS code well documented with comments but don't compile comments into the CSS file except for licences or important notices that need to be shown in source.
 
