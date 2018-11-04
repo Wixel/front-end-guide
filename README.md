@@ -1,4 +1,4 @@
-# Wixel Front-end Style Guide
+# Wixel Front-end code Style Guide
 
 The Wixel Style Guide defines the format, rules and style that should be followed by developers working on **ALL** Wixel sites & products. The reason for the Style Guide is to have high quality & maintainable code which result in great products/sites.
 
